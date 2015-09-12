@@ -1,10 +1,8 @@
 package com.limayeapps.material_play;
 
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 public class Second extends AppCompatActivity {
@@ -16,6 +14,7 @@ public class Second extends AppCompatActivity {
         CollapsingToolbarLayout cToolBar =
                 (CollapsingToolbarLayout)findViewById(R.id.collapsableToolBar);
         cToolBar.setTitle("Watch me Collapse");
+
         TextView tv = (TextView)findViewById(R.id.textView);
         tv.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam viverra sapien eu ante consectetur hendrerit. Quisque elementum bibendum volutpat. Maecenas consequat sapien dui, eget interdum mi porta sit amet. Sed eleifend magna pulvinar, faucibus ante vitae, porta sapien. Maecenas porta lobortis leo a viverra. Ut dignissim dignissim ex, non mattis ex blandit vitae. Curabitur nec fermentum risus, vitae iaculis nisi. Aliquam erat volutpat. Pellentesque commodo posuere venenatis. Donec tempus scelerisque auctor. In hac habitasse platea dictumst. Aliquam id dignissim dui. Curabitur vulputate nunc vitae orci ultrices, pellentesque mattis sapien laoreet. Nam mollis aliquam nulla vel cursus.\n" +
                 "\n" +
