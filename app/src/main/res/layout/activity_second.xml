@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Give appbar a specific height -->
+    <!-- always expected to be the first child -->
+    <!-- a container that makes toolbar responsive to scroll -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:background="@color/appBarColor">
+        <!-- Title is set on this.-->
+        <!-- layout_scrollFlags tell us how to respond to a scroll event-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsableToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+            app:expandedTitleMarginStart="72dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                app:contentInsetStart="72dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <!-- nestedScrollingEnabled="true" needed to allow appbar to collapse -->
+    <!-- app:layout_behavior needed for the 2nd child of coordinatorlayout to start below appBar (firstChild)-->
+    <!-- app:layout_behavior tells appBar when scrolling starts occurring -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:text="@string/hello_world"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

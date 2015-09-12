@@ -4,6 +4,6 @@
     <solid
         android:color="@color/background_floating_material_dark" />
 
-    <size android:height="@dimen/design_fab_content_size"
-        android:width="@dimen/design_fab_content_size" />
+    <size android:height="48dp"
+        android:width="48dp" />
 </shape>
